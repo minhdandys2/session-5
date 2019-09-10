@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu dien</title>
+</head>
+<body>
+    <form>
+        <input id="input" type="text">
+        <input type="button" value="search" onclick="timkiem()">
+    </form>
+    <div id="result"></div>
+    <script>
+        function timkiem() {
+            let ENG = ['hello', "you", "name", "red", "one", "good bye"];
+            let VIE = ["xin chào", "bạn", "tên", "màu đỏ", "số 1", "tạm biệt"];
+            let inp = document.getElementById("input").value;
+            let dis = "";
+            for (let i = 0; i < ENG.length; i++) {
+                if (inp === ENG[i]) {
+                    dis += VIE[i];
+                    document.getElementById("result").innerHTML = "có nghĩa là " + dis;
+                    break;
+                } else {
+                    document.getElementById("result").innerHTML = "Not Found";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
